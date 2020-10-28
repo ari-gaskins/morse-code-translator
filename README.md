@@ -1,2 +1,2 @@
 # morse-code-translator
-translates inputted morse code from spacebar
+translates inputted morse code from dots and dashes entered
