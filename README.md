@@ -1,2 +1,3 @@
 # morse-code-translator
-translates inputted morse code from dots and dashes entered
+
+Simple morse code translator that can tranlate individual letters or numbers into morse code or individual morse code characters into their designated letter or number.

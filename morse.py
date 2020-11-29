@@ -4,7 +4,10 @@ def morse(text):
 
     text = str(text)
 
-    letNumToMorse = {
+    if text.isalpha():
+        text = text.upper()
+
+    let_num_to_morse = {
         'A' : '.-', 'B' : '-...', 'C' : '-.-.', 'D' : '-..',
         'E' : '.', 'F' : '..-.', 'G' : '--.', 'H' : '....',
         'I' : '..', 'J' : '.---', 'K' : '-.-', 'L' : '.-..',
@@ -15,7 +18,7 @@ def morse(text):
         '3' : '...--', '4' : '....-', '5' : '.....', '6' : '-....',
         '7' : '--...', '8' : '---..', '9' : '----.', '0' : '-----' }
     
-    morseToLetNum = {
+    morse_to_let_num = {
         '.-' : 'A', '-...' : 'B', '-.-.' : 'C', '-..' : 'D',
         '.' : 'E', '..-.' : 'F', '--.' : 'G', '....' : 'H',
         '..' : 'I', '.---' : 'J', '-.-' : 'K', '.-..' : 'L',
@@ -25,13 +28,17 @@ def morse(text):
         '-.--' : 'Y', '--..' : 'Z', '.----' : '1', '..---' : '2',
         '...--' : '3', '....-' : '4', '.....' : '5', '-....' : '6', 
         '--...' : '7', '---..' : '8','----.' : '9', '-----' : '0'}
-
-    
     
 
-while (1==1):
-    message = str(input('Enter your message: '))
 
-    morse(message)
+    if text.isalpha() or text.isnumeric():
+        print(let_num_to_morse.get(text, 'Morse not found.'))
+    elif text == '.' or '-':
+        print(morse_to_let_num.get(text, 'Letter not found.'))
+    else:
+        print('Do not enter special characters.')
+
+while 1 == 1:
+    morse(input('Enter a letter, number, or morse character: '))   
 
 
